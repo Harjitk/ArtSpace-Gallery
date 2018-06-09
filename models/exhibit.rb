@@ -11,4 +11,45 @@ class Exhibit
     @exhibit_date = options['exhibit_date']
     @artist_id = options['artist_id'].to_i
   end
+
+  def save()
+     sql = "INSERT INTO exhibits
+     (
+       title,
+       exhibit_date,
+       artist_id
+     )
+     VALUES
+     (
+       $1, $2, $3
+     )
+     RETURNING id"
+     values = [@title, @exhibit, @artist_id]
+     result = SqlRunner.run(sql, values)
+     id = result.first['id']
+     @id = id
+  end
+
+  def update()
+      sql = "UPDATE exhibits
+      SET
+      (
+        title,
+        exhibit_date,
+        artist_id
+      ) =
+      (
+        $1, $2, $3
+      )
+      WHERE id = $5"
+      values = [@title, @exhibit_date, @artist_id]
+      SqlRunner.run(sql, values)
+    end
+
+    def delete()
+       sql = "DELETE FROM exhibits
+       WHERE id = $1"
+       values = [@id]
+       SqlRunner.run(sql, values)
+     end
 end
