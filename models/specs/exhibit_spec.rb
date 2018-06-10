@@ -7,7 +7,7 @@ class TestExhibit < MiniTest::Test
     options = {"id" => 1, "title" => "Pay Nothing Until April",
       "exhibit_date" => "10 June 2018", "artist_id" => 1}
       @exhibit = Exhibit.new(options)
-  end
+    end
 
 
     def test_exhibit_title
@@ -20,4 +20,4 @@ class TestExhibit < MiniTest::Test
       assert_equal("10 June 2018", result)
     end
 
-end
+  end
