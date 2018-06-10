@@ -7,24 +7,21 @@ Exhibit.delete_all()
 
 
 artist1 = Artist.new({
-  'first_name' => 'Edward',
-  'last_name' => 'Ruscha',
+  'name' => 'Edward Ruscha',
   'dob' => '1937'
   })
 
   artist1.save()
 
   artist2 = Artist.new({
-    'first_name' => 'Yayoi',
-    'last_name' => 'Kusama',
+    'name' => 'Yayoi Kusama',
     'dob' => '1929'
     })
 
     artist2.save()
 
     artist3 = Artist.new({
-      'first_name' => 'Gerhard',
-      'last_name' => 'Richter',
+      'name' => 'Gerhard Richter',
       'dob' => '1932'
       })
 

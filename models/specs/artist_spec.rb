@@ -4,37 +4,20 @@ require_relative("../artist")
 class TestArtist < MiniTest::Test
 
   def setup
-    options = {"id" => 1, "name" => "Salvador Dali",
-      "style" => "Surrealism"}
+    options = {"id" => 1, "name" => "Edward Ruscha",
+      "dob" => "1937"}
     @artist = Artist.new(options)
   end
 
-  artist1 = Artist.new({
-    'first_name' => 'Edward',
-    'last_name' => 'Ruscha',
-    'dob' => '1937'
-    })
 
-
-
-
-  def test_artist_has_a_name
+def test_artist_name
     result = @artist.name()
-    assert_equal("Salvador Dali", result)
+    assert_equal("Edward Ruscha", result)
   end
 
-  def test_artist_has_style
-    result = @artist.style()
-    assert_equal("Surrealism", result)
+  def test_artist_dob
+    result = @artist.dob()
+    assert_equal(1937, result)
   end
-
-
-  def test_name
-        assert_equal("Carsten Nicolai", @artist1.name)
-      end
-
-      def test_dob
-        assert_equal(1965, @artist1.dob)
-      end
-
+  #
 end

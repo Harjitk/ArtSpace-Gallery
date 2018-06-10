@@ -46,6 +46,11 @@ class Exhibit
       SqlRunner.run(sql, values)
     end
 
+    def self.delete_all()
+   sql = "DELETE FROM exhibits;"
+   SqlRunner.run(sql)
+ end
+
     def delete()
        sql = "DELETE FROM exhibits
        WHERE id = $1"
@@ -53,10 +58,7 @@ class Exhibit
        SqlRunner.run(sql, values)
      end
 
-     def self.delete_all()
-    sql = "DELETE FROM exhibits;"
-    SqlRunner.run(sql)
-  end
+  
 
   def self.all()
       sql = "SELECT * FROM exhibits"
