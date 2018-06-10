@@ -2,6 +2,10 @@ require_relative('../models/artist')
 require_relative('../models/exhibit')
 require("pry")
 
+Artist.delete_all()
+Exhibit.delete_all()
+
+
 artist1 = Artist.new({
   'first_name' => 'Edward',
   'last_name' => 'Ruscha',

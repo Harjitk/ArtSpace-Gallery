@@ -52,4 +52,24 @@ class Exhibit
        values = [@id]
        SqlRunner.run(sql, values)
      end
+
+     def self.delete_all()
+    sql = "DELETE FROM exhibits;"
+    SqlRunner.run(sql)
+  end
+
+  def self.all()
+      sql = "SELECT * FROM exhibits"
+      exhibits = SqlRunner.run( sql )
+      result = exhibits.mapS{ |exhibit| Exhibit.new( exhibit) }
+      return result
+    end
+
+    def self.find( id )
+    sql = "SELECT * FROM exhibits WHERE id = $1"
+    value = [id]
+    exhibit = SqlRunner.run(sql, value)
+    result = Exhibit.new( exhibit.first )
+    return result
+  end
 end
