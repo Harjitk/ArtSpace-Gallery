@@ -61,7 +61,7 @@ class Exhibit
   def self.all()
       sql = "SELECT * FROM exhibits"
       exhibits = SqlRunner.run( sql )
-      result = exhibits.mapS{ |exhibit| Exhibit.new( exhibit) }
+      result = exhibits.map{ |exhibit| Exhibit.new( exhibit) }
       return result
     end
 

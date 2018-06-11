@@ -1,0 +1,10 @@
+ <p>Name: <%= @artist.name() %></p>
+<p>DOB: <%= @artist.dob() %></p>
+
+<form method="get" action="/artist/<%=@artist.id%>/edit">
+<input type='submit' value="Edit artist"/>
+</form>
+
+<form method="post" action="/artist/<%=@artist.id%>/delete">
+<input type='submit' value="Delete Artist"/>
+</form>

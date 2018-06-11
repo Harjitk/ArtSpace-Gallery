@@ -1,8 +1,10 @@
-<h1>Artists</h1>
+<h1>Manage Artists</h1>
   <% @artists.each do |artist| %>
   <p>Name: <%= artist.name() %></p>
-  <p>DOB: <%= artist.dob %></p>
+  <p>: <%= artist.dob %></p>
+  <a href="/artist/<%= artist.id %>">Show Artist</a>
 <% end %>
+<br>
+<br>
+<br>
 <a href="/artist/new">Create new artist</a>
-
-<!-- create a table? -->
