@@ -1,0 +1,24 @@
+<h2>Create New Exhibit</h2>
+<form method="POST" action="/exhibits">
+
+  <label for="title">Title:</label>
+  <input id="title" type="text" name="title"/>
+
+  <label for="exhibit_date">Exhibit Date:</label>
+  <input id="exhibit_date" type="text" name="exhibit_date"/>
+
+  <label for="artist_id">Artist ID:</label>
+  <input id="artist_id" type="number" name="artist_id"/>
+
+
+  <div class="form-el">
+       <label for="artist_select">Select Artist:</label>
+       <select name="artist_id" id="artist_select">
+         <% @artists.each do |artist| %>
+             <option value=<%= artist.id %>><%= artist.name %></option>
+         <% end %>
+       </select>
+        </div>
+
+  <input type='Submit' value="Create an Exhibit"/>
+</form>

@@ -6,36 +6,37 @@ also_reload('./models/*')
 
 get '/artists' do
   @artists = Artist.all()
-  erb (:index)
+  erb (:"artists/index")
 end
 
 post '/artists' do
   Artist.new(params).save
   redirect "/artists"
-end 
+end
 
 #display a list of artists
 
-get '/artist/new' do #create new artist
+get '/artists/new' do #create new artist
   @artist = Artist.all()
-  erb(:new)
+  erb(:"artists/new")
 end
 
-get '/artist/:id/edit' do # edit
+get '/artists/:id/edit' do # edit
   @artist = Artist.find( params[:id] )
-  erb( :edit )
+  erb( :"artists/edit" )
 end
 
-get '/artist/:id' do # show
+get '/artists/:id' do # show
   @artist = Artist.find( params[:id] )
-  erb( :show )
+  erb( :"artists/show" )
 end
 
-post '/artist/:id' do # update
+
+post '/artists/:id' do # update
   Artist.new( params ).update
 end
 
-post '/artist/:id/delete' do # delete
+post '/artists/:id/delete' do # delete
   artist = Artist.find( params[:id] )
   artist.delete
   redirect "/artists"

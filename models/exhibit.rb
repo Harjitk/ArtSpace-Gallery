@@ -72,4 +72,12 @@ class Exhibit
     result = Exhibit.new( exhibit.first )
     return result
   end
+
+  def assign_exhibit_to_an_artist(id)
+     sql = "UPDATE exhibits
+     SET artist_id = $1
+     WHERE id = $2"
+     values = [id, @id]
+     SqlRunner.run( sql, values )
+   end
 end

@@ -68,5 +68,6 @@ def self.all()
     result = Artist.new( artist.first )
     return result
   end
+  
 
 end

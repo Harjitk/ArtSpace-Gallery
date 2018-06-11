@@ -1,10 +1,11 @@
 <h1>Manage Exhibits</h1>
-  <% @exhibits.each do |exhibit| %>
-  <p>Title: <%= exhibit.title() %></p>
-  <p>: <%= exhibit.exhibit_date %></p>
-    <p>: <%= exhibit.artist_id %></p>
+<% @exhibits.each do |exhibit| %>
+<p>Title: <%= exhibit.title() %></p>
+<p>Exhibit Date: <%= exhibit.exhibit_date() %></p>
+<p>Artist ID: <%= exhibit.artist_id() %></p>
+<a href="/exhibits/<%=exhibit.id%>">Show Exhibit</a>
 <% end %>
 <br>
 <br>
 <br>
-<a href="/artists/exhibits/new">Create New Exhibit</a>
+<a href="/exhibits/new">Create New Exhibit</a>
