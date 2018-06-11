@@ -58,8 +58,6 @@ class Exhibit
        SqlRunner.run(sql, values)
      end
 
-  
-
   def self.all()
       sql = "SELECT * FROM exhibits"
       exhibits = SqlRunner.run( sql )

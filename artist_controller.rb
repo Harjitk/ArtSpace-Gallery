@@ -11,7 +11,7 @@ end
 
 #display a list of artists
 
-get '/artists/new' do
+get '/artist/new' do
   @artists = Artist.all()
   erb(:new)
 end
