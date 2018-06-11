@@ -29,15 +29,17 @@ artist1 = Artist.new({
 
       exhibit1 = Exhibit.new({
         'title' => 'Pay Nothing Until April',
-        'exhibit_date' => '10 June 2018',
+        'exhibit_date' => '2003',
+        'category' => 'Abstract Art',
         'artist_id' => artist1.id
         })
 
         exhibit1.save()
 
         exhibit2 = Exhibit.new({
-          'title' => 'The passing winter',
-          'exhibit_date' => '15 July 2018',
+          'title' => 'The Passing Winter',
+          'exhibit_date' => '2005',
+          'category' => 'Contempory Art',
           'artist_id' => artist2.id
           })
 
@@ -46,7 +48,8 @@ artist1 = Artist.new({
 
           exhibit3 = Exhibit.new({
             'title' => 'Cage',
-            'exhibit_date' => '18 August 2018',
+            'exhibit_date' => '2006',
+            'category' => 'Modern Art',
             'artist_id' => artist3.id
             })
 

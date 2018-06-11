@@ -2,6 +2,7 @@
 <% @exhibits.each do |exhibit| %>
 <p>Title: <%= exhibit.title() %></p>
 <p>Exhibit Date: <%= exhibit.exhibit_date() %></p>
+<p>Category: <%= exhibit.category() %></p>
 <p>Artist ID: <%= exhibit.artist_id() %></p>
 <a href="/exhibits/<%=exhibit.id%>">Show Exhibit</a>
 <% end %>

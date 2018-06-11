@@ -11,6 +11,7 @@ CREATE TABLE artists (
 CREATE TABLE exhibits (
   id SERIAL8 primary key,
   title VARCHAR(255),
-  exhibit_date VARCHAR(255),
+  exhibit_date INT4,
+  category VARCHAR(255),
   artist_id INT4 REFERENCES artists(id) ON DELETE CASCADE
 );
