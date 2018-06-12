@@ -4,10 +4,10 @@
 <p>Artist ID: <%= @exhibit.artist_id() %></p>
 
 
-<form method="get" action="/exhibit/<%=@exhibit.id%>/edit">
+<form method="get" action="/exhibits/<%=@exhibit.id%>/edit">
 <input type='submit' value="Edit Exhibit"/>
 </form>
 
-<form method="post" action="/exhibit/<%=@exhibit.id%>/delete">
+<form method="post" action="/exhibits/<%=@exhibit.id%>/delete">
 <input type='submit' value="Delete Exhibit"/>
 </form>
