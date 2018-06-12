@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Exhibit
 
-  attr_accessor :title, :exhibit_date, :category, :artist_id
+  attr_accessor :title, :exhibit_date, :category, :artist_id, :picture
   attr_reader :id
 
   def initialize(options)
@@ -11,6 +11,7 @@ class Exhibit
     @exhibit_date = options['exhibit_date']
     @category = options['category']
     @artist_id = options['artist_id'].to_i
+    @picture = options["picture"]
   end
 
   def save()
@@ -19,14 +20,15 @@ class Exhibit
        title,
        exhibit_date,
        category,
-       artist_id
+       artist_id,
+       picture
      )
      VALUES
      (
-       $1, $2, $3, $4
+       $1, $2, $3, $4, $5
      )
      RETURNING id"
-     values = [@title, @exhibit_date, @category, @artist_id]
+     values = [@title, @exhibit_date, @category, @artist_id, @picture]
      result = SqlRunner.run(sql, values)
      id = result.first['id']
      @id = id
@@ -39,13 +41,14 @@ class Exhibit
         title,
         exhibit_date,
         category,
-        artist_id
+        artist_id,
+        picture
       ) =
       (
-        $1, $2, $3, $4
+        $1, $2, $3, $4, $5
       )
       WHERE id = $5"
-      values = [@title, @exhibit_date, @category, @artist_id]
+      values = [@title, @exhibit_date, @category, @artist_id, @picture]
       SqlRunner.run(sql, values)
     end
 

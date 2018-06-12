@@ -5,7 +5,7 @@ class TestArtist < MiniTest::Test
 
   def setup
     options = {"id" => 1, "name" => "Edward Ruscha",
-      "dob" => "1937"}
+      "dob" => "1937", "picture" =>"/images/ArtistEdwardRuscha.jpg"}
       @artist = Artist.new(options)
     end
 

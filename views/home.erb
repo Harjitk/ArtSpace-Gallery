@@ -1,21 +1,21 @@
-<h1>Exhibits</h1>
-
-<% @exhibits.each do |exhibit| %>
-
-<p>Artist: <%= exhibit.artist.name %></p>
-<p>Exhibit Date: <%= exhibit.exhibit_date() %></p>
-<p>Category: <%= exhibit.category() %></p>
-<p>Title: <%= exhibit.title()%></p>
-<% end %>
-
-<h1>Artists</h1>
+<h1>Artists in the Collection</h1>
 
 <% for artist in @artists %>
   <p>Name: <%= artist.name() %></p>
   <p>DOB: <%= artist.dob() %></p>
-  <p>Exhibits:
+  <p>Exhibit:
     <% artist.exhibits.each do |exhibit| %>
       <%= exhibit.title %>
     <% end %>
   </p>
+  <img src =  "<%= artist.picture() %>" width = 350 height = 350/>
+  <% end %>
+
+<h1>Exhibits in the Collection</h1>
+<% @exhibits.each do |exhibit| %>
+<p>Title: <%= exhibit.title()%></p>
+<p>Artist: <%= exhibit.artist.name %></p>
+<p>Exhibit Date: <%= exhibit.exhibit_date() %></p>
+<p>Category: <%= exhibit.category() %></p>
+<img src =  "<%= exhibit.picture() %>" width = 350 height = 350/>
 <% end %>
