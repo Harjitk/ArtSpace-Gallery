@@ -1,3 +1,5 @@
+<div class ="conts">
+<div  class='artists'>
 <h1>Artists in the Collection</h1>
 
 <% for artist in @artists %>
@@ -11,6 +13,9 @@
   <img src =  "<%= artist.picture() %>" width = 350 height = 350/>
   <% end %>
 
+</div>
+
+<div class='exhibits'>
 <h1>Exhibits in the Collection</h1>
 <% @exhibits.each do |exhibit| %>
 <p>Title: <%= exhibit.title()%></p>
@@ -19,3 +24,6 @@
 <p>Category: <%= exhibit.category() %></p>
 <img src =  "<%= exhibit.picture() %>" width = 350 height = 350/>
 <% end %>
+</div>
+<div class="clear"></div>
+</div>

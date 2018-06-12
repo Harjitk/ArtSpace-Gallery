@@ -1,4 +1,66 @@
+body {
+    background-color: SmokeWhite;
+    font-family: 'Molengo', Georgia, Times, serif;
+}
 
-.menu-item {
-  font-family: 'verdana', sans-serif;
+
+#menu a {
+
+  font-family: 'Molengo', Georgia, Times, serif;
+  font-size: 20px;
+
+}
+
+/* unvisited link */
+#menu a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+#menu a:visited {
+  color: black;
+}
+
+/* mouse over link */
+#menu a:hover {
+  color: black;
+}
+
+/* selected link */
+#menu a:active {
+  color: black;
+}
+
+.logo{
+	  text-align: center;
+	  padding-bottom: 5px;
+	}
+
+
+.conts {
+    text-align: center;
+    padding: 20px;
+}
+
+.container p{
+  font-size: 20px;
+  color: black;
+}
+.container .artists {
+    float: left;
+    width: calc(50% - 10px);
+    display: block;
+    padding: 5px;
+}
+
+.container .exhibits {
+    width: calc(50% - 10px);
+    float: right;
+    display: block;
+    padding: 5px;
+}
+
+.clear {
+    clear: both;
 }

@@ -1,0 +1,14 @@
+body {
+    background-color: SmokeWhite;
+    font-family: 'Molengo', Georgia, Times, serif;
+}
+
+.exhibits{
+  float: right;
+  display: block;
+}
+
+.logo{
+	  text-align: center;
+	  padding-bottom: 5px;
+	}
