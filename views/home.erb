@@ -1,0 +1,21 @@
+<h1>Exhibits</h1>
+
+<% @exhibits.each do |exhibit| %>
+
+<p>Artist: <%= exhibit.artist.name %></p>
+<p>Exhibit Date: <%= exhibit.exhibit_date() %></p>
+<p>Category: <%= exhibit.category() %></p>
+<p>Title: <%= exhibit.title()%></p>
+<% end %>
+
+<h1>Artists</h1>
+
+<% for artist in @artists %>
+  <p>Name: <%= artist.name() %></p>
+  <p>DOB: <%= artist.dob() %></p>
+  <p>Exhibits:
+    <% artist.exhibits.each do |exhibit| %>
+      <%= exhibit.title %>
+    <% end %>
+  </p>
+<% end %>
