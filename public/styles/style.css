@@ -3,12 +3,10 @@ body {
     font-family: 'Molengo', Georgia, Times, serif;
 }
 
-
 #menu a {
 
   font-family: 'Molengo', Georgia, Times, serif;
   font-size: 20px;
-
 }
 
 /* unvisited link */
@@ -37,24 +35,24 @@ body {
 	  padding-bottom: 5px;
 	}
 
-
 .conts {
     text-align: center;
     padding: 20px;
 }
 
-.container p{
+.conts p{
   font-size: 20px;
   color: black;
 }
-.container .artists {
+
+.conts .artists {
     float: left;
     width: calc(50% - 10px);
     display: block;
     padding: 5px;
 }
 
-.container .exhibits {
+.conts .exhibits {
     width: calc(50% - 10px);
     float: right;
     display: block;
