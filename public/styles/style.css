@@ -52,13 +52,10 @@ body {
     padding: 5px;
 }
 
+
 .conts .exhibits {
     width: calc(50% - 10px);
     float: right;
     display: block;
     padding: 5px;
-}
-
-.clear {
-    clear: both;
 }
