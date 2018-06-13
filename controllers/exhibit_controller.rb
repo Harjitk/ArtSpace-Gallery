@@ -34,8 +34,9 @@ get '/exhibits/:id/edit' do # edit
 end
 
 
-post '/exhibits/:id' do # update
+post '/exhibits/:id/edit' do # update
   Exhibit.new( params ).update
+  redirect '/exhibits'
 end
 
 get '/exhibits/:id' do # show

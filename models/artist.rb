@@ -41,7 +41,7 @@ def update()
       $1, $2, $3
     )
     WHERE id = $4"
-    values = [@name, @dob, @picture]
+    values = [@name, @dob, @picture, @id]
     SqlRunner.run(sql, values)
   end
 

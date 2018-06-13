@@ -3,7 +3,7 @@
 <p>Title: <%= exhibit.title() %></p>
 <p>Exhibit Date: <%= exhibit.exhibit_date() %></p>
 <p>Category: <%= exhibit.category() %></p>
-<p>Artist ID: <%= exhibit.artist_id() %></p>
+<p>Artist ID: <%= exhibit.artist.name %></p>
 <a href="/exhibits/<%=exhibit.id%>">Show Exhibit</a>
 <% end %>
 <br>

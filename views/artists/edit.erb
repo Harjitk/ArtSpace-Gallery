@@ -1,9 +1,11 @@
-<form method="post" action="/artists/<%=@artist.id%>/edit">
+<form method="post" action="/artists/<%=@artist.id%>/update">
    <label for="name">Name:</label>
    <input id="name" type="text" name="name"/>
 
    <label for="dob">DOB:</label>
    <input id="dob" type="text" name="dob"/>
+
+   <input name="picture" value="<%=@artist.picture%>" type="hidden"/>
 
    <input type='Submit' value="Update Artist"/>
  </form>

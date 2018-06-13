@@ -32,8 +32,9 @@ get '/artists/:id' do # show
 end
 
 
-post '/artists/:id' do # update
+post '/artists/:id/update' do # update
   Artist.new( params ).update
+  redirect '/artists'
 end
 
 post '/artists/:id/delete' do # delete
