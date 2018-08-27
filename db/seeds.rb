@@ -1,6 +1,5 @@
 require_relative('../models/artist')
 require_relative('../models/exhibit')
-require("pry")
 
 Artist.delete_all()
 Exhibit.delete_all()
