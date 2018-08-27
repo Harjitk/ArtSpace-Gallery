@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('../models/exhibit')
 require_relative('../models/artist')
-also_reload('./models/*')
+
 
 get '/exhibits' do
   @exhibits = Exhibit.all()
