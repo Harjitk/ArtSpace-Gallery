@@ -62,5 +62,5 @@ artist1 = Artist.new({
             exhibit3.save()
 
 
-            binding.pry
-            nil
+            # binding.pry
+            # nil
