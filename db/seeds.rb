@@ -1,5 +1,6 @@
 require_relative('../models/artist')
 require_relative('../models/exhibit')
+require('pry')
 
 Artist.delete_all()
 Exhibit.delete_all()
@@ -61,5 +62,5 @@ artist1 = Artist.new({
             exhibit3.save()
 
 
-            # binding.pry
-            # nil
+            binding.pry
+            nil

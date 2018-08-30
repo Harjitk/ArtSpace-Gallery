@@ -1,15 +1,24 @@
 <form method="post" action="/exhibits/<%=@exhibit.id%>/edit">
-   <label for="title">Title:</label>
-   <input id="title" type="text" name="title"/>
+  <label for="title">Title:</label>
+  <input id="title" type="text" name="title"/>
 
-   <label for="exhibit_date">Exhibit Date:</label>
-   <input id="exhibit_date" type="text" name="exhibit_date"/>
+  <label for="exhibit_date">Exhibit Date:</label>
+  <input id="exhibit_date" type="text" name="exhibit_date"/>
 
-   <label for="category">Category:</label>
-   <input id="category" type="text" name="category"/>
+  <label for="category">Category:</label>
+  <input id="category" type="text" name="category"/>
 
-   <label for="artist_id">Artist ID:</label>
-   <input id="artist_id" type="number" name="artist_id"/>
 
-   <input type='Submit' value="Update Exhibit"/>
- </form>
+  <label for="picture">Select Picture:</label>
+  <input id="picture" type="number" name="picture"/>
+
+  <label for="artist_select">Select Artist:</label>
+  <select name="artist_id" id="artist_id">
+    <% @artists.each do |artist| %>
+    <option value=<%= artist.id %>><%= artist.name %></option>
+    <% end %>
+  </select>
+
+
+  <input type='Submit' value="Update Exhibit"/>
+</form>
